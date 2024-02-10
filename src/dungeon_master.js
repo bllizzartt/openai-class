@@ -9,8 +9,8 @@
  * outlandish commands.
  */
 
-import { gptPrompt } from "../shared/openai.js";
-import { ask, say } from "../shared/cli.js";
+import { gptPrompt } from "./shared/openai.js";
+import { ask, say } from "./shared/cli.js";
 
 main();
 
@@ -19,7 +19,7 @@ async function main() {
 
   const context = [];
   let playing = true;
-  const location = "woods";
+  const location = "Cat Galaxy";
   const player = {};
   player.name = await ask("What is your name?");
   player.class = await ask("What is your class?");
@@ -39,9 +39,9 @@ async function main() {
  
   Recently: ${context.slice(-3).join(" ")}
 
-  Respond in second person.
-  Be breif, and avoid narating actions not taken by the player via commands.
-  When describing locations mention places the player might go.
+  Respond in third person.
+  Be breif, and avoid narrating actions not taken by the player via commands.
+  When describing locations mention places the player might go but in a futuristic setting and how you are the only non human in this cat run galaxy.
 
   
 

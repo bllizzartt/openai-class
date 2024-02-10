@@ -3,8 +3,10 @@
  * Uses GPT to generate trivia questions based on a user-provided topic.
  * Uses GPT to evaluate the answers.
  */
-import { ask, say } from "../shared/cli.js";
-import { gptPrompt } from "../shared/openai.js";
+
+// modified easy but had difficulty with hard
+import { ask, say } from "./shared/cli.js";
+import { gptPrompt } from "./shared/openai.js";
 
 main();
 
@@ -44,9 +46,10 @@ async function main() {
     The provided answer was '${a}'.
     Was the answer correct?
     Be an easy grader. Accept answers that are close enough. Allow misspellings.
-    Answer yes or no. If no, provide the correct answer.
+    Answer yes or no. If no, provide the correct answer. at the end of the four questions track the amount of questions answered correctly. 
+    should look like '0/4' , '1/4', '2/4', '3/4', '4/4'. make sure to remember and add the score for each question and show us it at the end
     `,
-      { max_tokens: 64, temperature: 0.1 },
+      { max_tokens: 64, temperature: 0.9 },
     );
     say(response);
     say("");

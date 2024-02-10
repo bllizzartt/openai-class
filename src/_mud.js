@@ -1,7 +1,7 @@
 // unfinished demo
 
-import { ask, say } from "../shared/cli.js";
-import { gptPrompt } from "../shared/openai.js";
+import { ask, say } from "./shared/cli.js";
+import { gptPrompt } from "./shared/openai.js";
 
 const things = {
   chamber1: {
