@@ -1,3 +1,6 @@
+// Overall I adapted the dungeon_master.js file into this and used minor openAI prompts for resolution
+// Used to openAI for guidance on the getGreeting() setup
+
 import { gptPrompt } from "./shared/openai.js";
 import { ask, say } from "./shared/cli.js";
 
